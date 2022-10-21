@@ -23,7 +23,7 @@ export default function CreateStudent() {
 
     const createStudent = () => {
         console.log("Hi");
-        axios.post('http://localhost:4000/students', student).then(()=>{
+        axios.post('https://school-server-seven.vercel.app/students', student).then(()=>{
             window.location.reload(false);
         })
         console.log(student);
