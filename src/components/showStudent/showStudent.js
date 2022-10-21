@@ -23,7 +23,7 @@ export default function ShowStudent() {
   const [studentList, setStudentList] = useState([]);
 
   const deleteStudent=(id)=>{
-    axios.delete(`http://localhost:4000/students/${id}`).then(()=>{
+    axios.delete(`https://school-server-seven.vercel.app/students/${id}`).then(()=>{
       window.location.reload(false);
     })
   }
@@ -31,7 +31,7 @@ export default function ShowStudent() {
 
   // }
   useEffect(() => {
-    axios.get('http://localhost:4000/students').then((allStudents) => {
+    axios.get('https://school-server-seven.vercel.app/students').then((allStudents) => {
       setStudentList(allStudents.data);
     })
   }, []);
